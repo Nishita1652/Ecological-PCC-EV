@@ -1,4 +1,6 @@
 __pycache__/
 *.csv
 .env
-.DS_Store
+*.h5
+models/
+results.png

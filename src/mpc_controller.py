@@ -4,12 +4,13 @@ from scipy.optimize import minimize
 from vehicle_dynamics import ElectricVehicle
 
 class MPCController:
-    def __init__(self, model_path='models/traffic_lstm.h5'):
-        # Load the AI we trained in Phase 2
+    def __init__(self, model_path='models/traffic_lstm.keras'):
         try:
             self.ai_model = tf.keras.models.load_model(model_path)
-        except:
-            print("❌ Error: Could not load model. Using dummy prediction.")
+            print("✅ AI Model loaded successfully.")
+        except Exception as e:
+            print(f"❌ Error loading model: {e}")
+            print("Using dummy prediction instead.")
             self.ai_model = None
         
         # MPC Parameters
