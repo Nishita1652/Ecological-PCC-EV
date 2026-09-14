@@ -3,4 +3,4 @@ __pycache__/
 .env
 *.h5
 models/
-results.png
+results.png.DS_Store
