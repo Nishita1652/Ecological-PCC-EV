@@ -5,7 +5,7 @@ This repository implements a predictive, energy-optimizing cruise control system
 Developed as a high-fidelity proof-of-concept for automotive R&D, this project demonstrates how shifting from reactive following to predictive pacing can effectively harvest kinetic energy and reduce aerodynamic drag without compromising passenger comfort.
 
 **Core Architecture**
-* **Forecasting Engine (Keras 3):** A stacked Long Short-Term Memory (LSTM) network processes a 100-step historical speed buffer to predict the leader vehicle's trajectory across a 20-step future horizon. 
+* **Forecasting Engine (Keras 3):** A stacked Long Short-Term Memory (LSTM) network processes a 100-step historical speed buffer to predict the leader vehicle's trajectory across a 10-step future horizon. 
 * **Model Predictive Control (SciPy):** An SLSQP optimizer evaluates the predicted horizon against a multi-objective cost function, actively balancing speed tracking, safety gap maintenance (15m–35m), jerk minimization, and energy conservation.
 * **Asymmetric EV Physics:** The vehicle dynamics engine calculates realistic longitudinal constraints, factoring in aerodynamic drag, rolling resistance, a 92% propulsion efficiency, and a 75% regenerative braking efficiency.
 
